@@ -1,91 +1,101 @@
+/* Atelier YO — Upptime theme */
 :root{
-  --body-background-color:#0b1220;
-  --body-text-color:#e5e7eb;
-
-  --card-background-color:rgba(255,255,255,.06);
-  --card-border-color:rgba(255,255,255,.10);
-
-  --nav-background-color:rgba(11,18,32,.75);
-  --nav-border-bottom-color:rgba(255,255,255,.10);
-
-  --link-color:#7dd3fc;
-
-  --up-border-left-color:#22c55e;
-  --down-border-left-color:#ef4444;
-  --degraded-border-left-color:#f59e0b;
+  --bg:#0b1220;
+  --panel:#0f1a2e;
+  --card:#0f172a;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --line:rgba(255,255,255,.10);
+  --accent:#22c55e;
+  --accent2:#60a5fa;
 }
 
-/* Global */
-html, body { height: 100%; }
+html,body{height:100%}
 body{
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,.18), transparent 60%),
-              radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.12), transparent 55%),
-              var(--body-background-color);
-  color: var(--body-text-color);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif!important;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.20), transparent 60%),
+              radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,.18), transparent 55%),
+              var(--bg)!important;
+  color:var(--text)!important;
 }
 
-/* Layout polish */
-main{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 28px 18px 64px;
+/* Make the page feel like a real status page */
+.container, .wrapper, main, .content{
+  max-width: 1040px!important;
 }
 
-/* Sticky glassy navbar */
-nav{
-  position: sticky;
-  top: 0;
-  z-index: 50;
+/* Header */
+header{
+  background: linear-gradient(180deg, rgba(15,26,46,.85), rgba(15,26,46,.35))!important;
+  border-bottom:1px solid var(--line)!important;
+  padding:18px 0!important;
+}
+header a{
+  color:var(--text)!important;
+  text-decoration:none!important;
+  font-weight:700!important;
+  letter-spacing:.2px;
+}
+header img{height:34px!important}
+
+/* Hide the default tiny “upptime” link if it shows */
+header a[href*="upptime"]{
+  opacity:.0;
+  pointer-events:none;
+}
+
+/* Hero / Title */
+h1,h2,h3{color:var(--text)!important}
+h1{
+  font-size: 44px!important;
+  letter-spacing: -0.8px;
+  margin-top: 26px!important;
+}
+p{color:var(--muted)!important}
+
+/* Cards */
+section, .card, .box, .panel, .markdown-body{
+  background: rgba(15,23,42,.55)!important;
+  border:1px solid var(--line)!important;
+  border-radius:16px!important;
+  padding:18px!important;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: var(--nav-background-color) !important;
-  border-bottom: 1px solid var(--nav-border-bottom-color) !important;
 }
 
-/* Make the “status table” feel like cards */
+/* Links & buttons */
+a{color:var(--accent2)!important}
+a:hover{opacity:.9}
+button, .btn, input[type="submit"]{
+  border-radius:12px!important;
+}
+
+/* Tables (monitored services) */
 table{
-  width: 100%;
-  border-collapse: separate !important;
-  border-spacing: 0 12px !important;
+  width:100%!important;
+  border-collapse:collapse!important;
+  overflow:hidden;
+  border-radius:14px!important;
 }
-thead{ display:none; }
-tbody tr{
-  background: var(--card-background-color);
-  border: 1px solid var(--card-border-color);
-  border-radius: 16px;
-  overflow: hidden;
+th,td{
+  border-bottom:1px solid var(--line)!important;
+  padding:12px 10px!important;
 }
-tbody td{
-  padding: 14px 14px !important;
-  border: none !important;
+thead th{
+  color:var(--text)!important;
+  background: rgba(255,255,255,.04)!important;
 }
 tbody tr:hover{
-  transform: translateY(-1px);
-  transition: transform .15s ease;
+  background: rgba(255,255,255,.03)!important;
 }
 
-/* Nicer headings */
-h1,h2,h3{
-  letter-spacing: -0.02em;
+/* Status badges */
+img[alt*="status"], img[alt*="Response time"], .status, .tag{
+  filter: saturate(1.1);
 }
-h1{ font-size: 34px; }
-h2{ font-size: 22px; opacity: .95; }
 
-/* Links */
-a{ color: var(--link-color) !important; text-decoration: none; }
-a:hover{ text-decoration: underline; }
-
-/* Details/summary nicer */
-details{
-  background: rgba(0,0,0,.10);
-  border: 1px solid var(--card-border-color);
-  border-radius: 12px;
-  padding: 10px 12px;
-}
-summary{ cursor: pointer; }
-
-/* Footer a bit calmer */
+/* Footer */
 footer{
-  opacity: .85;
+  color:var(--muted)!important;
+  border-top:1px solid var(--line)!important;
+  margin-top:28px!important;
 }
