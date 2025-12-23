@@ -17,19 +17,15 @@ sites:
       - "User-Agent: upptime.js.org"
 
 status-website:
-  # Hosted on GitHub Pages: https://n3uralcreativity.github.io/upptime/
-  baseUrl: /upptime
+  cname: status.atelier-yo.fr
 
-  # Branding (use your site's favicon for a clean, legit look)
   name: Atelier YO — Status
   logoUrl: https://atelier-yo.fr/favicon.ico
   favicon: https://atelier-yo.fr/favicon.ico
 
-  # Header text
   introTitle: "Atelier YO — Service Status"
   introMessage: "Live uptime, incidents, and response-time history for atelier-yo.fr."
 
-  # Navigation
   navbar:
     - title: Status
       href: /
@@ -39,5 +35,3 @@ status-website:
       href: https://github.com/$OWNER/$REPO/issues
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Optional: you can add notifications later (Discord, email, etc.)
