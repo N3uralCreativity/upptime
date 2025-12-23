@@ -7,21 +7,29 @@ sites:
   - name: Atelier YO
     url: https://atelier-yo.fr
     icon: https://atelier-yo.fr/favicon.ico
+    headers:
+      - "User-Agent: upptime.atelier-yo.fr"
+
   - name: Atelier YO (www)
     url: https://www.atelier-yo.fr
     icon: https://atelier-yo.fr/favicon.ico
+    headers:
+      - "User-Agent: upptime.atelier-yo.fr"
 
 status-website:
+  # Custom domain
   cname: status.atelier-yo.fr
 
   # Branding
   name: Atelier YO — Status
-  logoUrl: https://status.atelier-yo.fr/logo.svg
-  faviconSvg: https://status.atelier-yo.fr/logo.svg
-  favicon: https://status.atelier-yo.fr/favicon.png
 
-  # Make it look good
-  themeUrl: https://status.atelier-yo.fr/atelier-yo-theme.css
+  # IMPORTANT: load assets from GitHub Pages (reliable)
+  logoUrl: https://n3uralcreativity.github.io/upptime/assets/logo.svg
+  faviconSvg: https://n3uralcreativity.github.io/upptime/assets/logo.svg
+  favicon: https://n3uralcreativity.github.io/upptime/assets/favicon.png
+
+  # Theme CSS (also from GitHub Pages)
+  themeUrl: https://n3uralcreativity.github.io/upptime/assets/atelier-yo-theme.css
 
   introTitle: "Atelier YO — Service status"
   introMessage: "Live uptime + incident history for **atelier-yo.fr**."
@@ -36,13 +44,14 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
+  # Optional extra meta
   metaTags:
     - name: "theme-color"
       content: "#0b1220"
     - name: "color-scheme"
       content: "dark light"
 
-  # Optional: inject a nicer font
+  # Optional: nicer font
   customHeadHtml: >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
