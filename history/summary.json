@@ -2,7 +2,7 @@
   {
     "name": "Atelier YO",
     "url": "https://atelier-yo.fr",
-    "icon": "https://icons.duckduckgo.com/ip3/atelier-yo.fr.ico",
+    "icon": "https://atelier-yo.fr/favicon.ico",
     "slug": "atelier-yo",
     "status": "up",
     "uptime": "100.00%",
@@ -20,7 +20,7 @@
   {
     "name": "Atelier YO (www)",
     "url": "https://www.atelier-yo.fr",
-    "icon": "https://icons.duckduckgo.com/ip3/www.atelier-yo.fr.ico",
+    "icon": "https://atelier-yo.fr/favicon.ico",
     "slug": "atelier-yo-www",
     "status": "up",
     "uptime": "100.00%",
@@ -28,11 +28,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 344,
-    "timeDay": 344,
-    "timeWeek": 344,
-    "timeMonth": 344,
-    "timeYear": 344,
+    "time": 395,
+    "timeDay": 395,
+    "timeWeek": 395,
+    "timeMonth": 395,
+    "timeYear": 395,
     "dailyMinutesDown": {}
   }
 ]
