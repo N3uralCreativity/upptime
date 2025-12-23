@@ -1,12 +1,12 @@
-# Change these first
+# Repo info
 owner: N3uralCreativity
 repo: upptime
 
-# Make the User-Agent predictable (Cloudflare will see this)
-user-agent: Mozilla/5.0 (Upptime)
+# Make requests consistent (also helps with Cloudflare rules)
+user-agent: upptime.js.org
 
 sites:
-  - name: Atelier YO (Main)
+  - name: Atelier YO
     url: https://atelier-yo.fr
     headers:
       - "User-Agent: upptime.js.org"
@@ -17,18 +17,27 @@ sites:
       - "User-Agent: upptime.js.org"
 
 status-website:
-  # No custom domain for the status page:
-  # (status page will be at https://n3uralcreativity.github.io/upptime/)
+  # Hosted on GitHub Pages: https://n3uralcreativity.github.io/upptime/
   baseUrl: /upptime
 
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Atelier YO Status
-  introTitle: "**Atelier YO — Status**"
-  introMessage: Live uptime and incident updates for **atelier-yo.fr**.
+  # Branding (use your site's favicon for a clean, legit look)
+  name: Atelier YO — Status
+  logoUrl: https://atelier-yo.fr/favicon.ico
+  favicon: https://atelier-yo.fr/favicon.ico
+
+  # Header text
+  introTitle: "Atelier YO — Service Status"
+  introMessage: "Live uptime, incidents, and response-time history for atelier-yo.fr."
+
+  # Navigation
   navbar:
     - title: Status
       href: /
     - title: Website
       href: https://atelier-yo.fr
+    - title: Incidents
+      href: https://github.com/$OWNER/$REPO/issues
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+# Optional: you can add notifications later (Discord, email, etc.)
