@@ -1,101 +1,86 @@
-/* Atelier YO — Upptime theme */
-:root{
-  --bg:#0b1220;
-  --panel:#0f1a2e;
-  --card:#0f172a;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-  --line:rgba(255,255,255,.10);
-  --accent:#22c55e;
-  --accent2:#60a5fa;
+:root {
+  --body-background-color: #0b1220;
+  --body-text-color: #e6edf7;
+
+  --card-background-color: rgba(255, 255, 255, 0.06);
+  --card-border-color: rgba(255, 255, 255, 0.10);
+
+  --nav-background-color: rgba(11, 18, 32, 0.75);
+  --nav-border-bottom-color: rgba(255, 255, 255, 0.10);
+
+  --link-color: #7dd3fc;
+  --link-hover-color: #bae6fd;
+
+  --shadow-color: rgba(0, 0, 0, 0.35);
 }
 
-html,body{height:100%}
-body{
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif!important;
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.20), transparent 60%),
-              radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,.18), transparent 55%),
-              var(--bg)!important;
-  color:var(--text)!important;
+/* Global polish */
+html, body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
 }
 
-/* Make the page feel like a real status page */
-.container, .wrapper, main, .content{
-  max-width: 1040px!important;
+body {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(125, 211, 252, 0.18), transparent 55%),
+              radial-gradient(900px 500px at 90% 0%, rgba(34, 197, 94, 0.12), transparent 60%),
+              var(--body-background-color) !important;
+  color: var(--body-text-color) !important;
 }
 
-/* Header */
-header{
-  background: linear-gradient(180deg, rgba(15,26,46,.85), rgba(15,26,46,.35))!important;
-  border-bottom:1px solid var(--line)!important;
-  padding:18px 0!important;
-}
-header a{
-  color:var(--text)!important;
-  text-decoration:none!important;
-  font-weight:700!important;
-  letter-spacing:.2px;
-}
-header img{height:34px!important}
-
-/* Hide the default tiny “upptime” link if it shows */
-header a[href*="upptime"]{
-  opacity:.0;
-  pointer-events:none;
+/* Cards / sections */
+main, .container, .card, section, article {
+  border-radius: 16px !important;
 }
 
-/* Hero / Title */
-h1,h2,h3{color:var(--text)!important}
-h1{
-  font-size: 44px!important;
-  letter-spacing: -0.8px;
-  margin-top: 26px!important;
-}
-p{color:var(--muted)!important}
-
-/* Cards */
-section, .card, .box, .panel, .markdown-body{
-  background: rgba(15,23,42,.55)!important;
-  border:1px solid var(--line)!important;
-  border-radius:16px!important;
-  padding:18px!important;
-  backdrop-filter: blur(10px);
+/* Make tables look like modern status pages */
+table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 10px !important;
 }
 
-/* Links & buttons */
-a{color:var(--accent2)!important}
-a:hover{opacity:.9}
-button, .btn, input[type="submit"]{
-  border-radius:12px!important;
+thead th {
+  opacity: 0.75 !important;
+  font-weight: 600 !important;
 }
 
-/* Tables (monitored services) */
-table{
-  width:100%!important;
-  border-collapse:collapse!important;
-  overflow:hidden;
-  border-radius:14px!important;
-}
-th,td{
-  border-bottom:1px solid var(--line)!important;
-  padding:12px 10px!important;
-}
-thead th{
-  color:var(--text)!important;
-  background: rgba(255,255,255,.04)!important;
-}
-tbody tr:hover{
-  background: rgba(255,255,255,.03)!important;
+tbody tr {
+  background: var(--card-background-color) !important;
+  box-shadow: 0 10px 30px var(--shadow-color) !important;
 }
 
-/* Status badges */
-img[alt*="status"], img[alt*="Response time"], .status, .tag{
-  filter: saturate(1.1);
+tbody td {
+  padding: 14px 14px !important;
+  border-top: 1px solid var(--card-border-color) !important;
+  border-bottom: 1px solid var(--card-border-color) !important;
 }
 
-/* Footer */
-footer{
-  color:var(--muted)!important;
-  border-top:1px solid var(--line)!important;
-  margin-top:28px!important;
+tbody td:first-child {
+  border-left: 1px solid var(--card-border-color) !important;
+  border-top-left-radius: 14px !important;
+  border-bottom-left-radius: 14px !important;
+}
+
+tbody td:last-child {
+  border-right: 1px solid var(--card-border-color) !important;
+  border-top-right-radius: 14px !important;
+  border-bottom-right-radius: 14px !important;
+}
+
+/* Links */
+a {
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: var(--link-hover-color) !important;
+  text-decoration: underline !important;
+}
+
+/* Details dropdown */
+details {
+  background: transparent !important;
+}
+summary {
+  cursor: pointer !important;
+  user-select: none !important;
 }
