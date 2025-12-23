@@ -1,37 +1,49 @@
-# Repo info
+# Core
 owner: N3uralCreativity
 repo: upptime
-
-# Make requests consistent (also helps with Cloudflare rules)
-user-agent: upptime.js.org
+user-agent: upptime.atelier-yo.fr
 
 sites:
   - name: Atelier YO
     url: https://atelier-yo.fr
-    headers:
-      - "User-Agent: upptime.js.org"
-
+    icon: https://atelier-yo.fr/favicon.ico
   - name: Atelier YO (www)
     url: https://www.atelier-yo.fr
-    headers:
-      - "User-Agent: upptime.js.org"
+    icon: https://atelier-yo.fr/favicon.ico
 
 status-website:
   cname: status.atelier-yo.fr
 
+  # Branding
   name: Atelier YO — Status
-  logoUrl: https://atelier-yo.fr/favicon.ico
-  favicon: https://atelier-yo.fr/favicon.ico
+  logoUrl: https://status.atelier-yo.fr/logo.svg
+  faviconSvg: https://status.atelier-yo.fr/logo.svg
+  favicon: https://status.atelier-yo.fr/favicon.png
 
-  introTitle: "Atelier YO — Service Status"
-  introMessage: "Live uptime, incidents, and response-time history for atelier-yo.fr."
+  # Make it look good
+  themeUrl: https://status.atelier-yo.fr/atelier-yo-theme.css
+
+  introTitle: "Atelier YO — Service status"
+  introMessage: "Live uptime + incident history for **atelier-yo.fr**."
 
   navbar:
     - title: Status
       href: /
-    - title: Website
+    - title: Main website
       href: https://atelier-yo.fr
     - title: Incidents
-      href: https://github.com/$OWNER/$REPO/issues
+      href: /history
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+  metaTags:
+    - name: "theme-color"
+      content: "#0b1220"
+    - name: "color-scheme"
+      content: "dark light"
+
+  # Optional: inject a nicer font
+  customHeadHtml: >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
