@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Atelier YO — Status</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true"></div>
+        <div class="brand__text">
+          <div class="brand__name">Atelier YO</div>
+          <div class="brand__sub">Service status</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__link" href="https://atelier-yo.fr" rel="noopener">Main website</a>
+        <a class="nav__link" href="https://github.com/N3uralCreativity/upptime/issues" rel="noopener">Incidents</a>
+        <a class="nav__link" href="https://github.com/N3uralCreativity/upptime" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero__card" id="overallCard">
+        <div class="hero__status">
+          <span class="dot" id="overallDot" aria-hidden="true"></span>
+          <div class="hero__statusText">
+            <h1 id="overallTitle">Loading status…</h1>
+            <p id="overallSubtitle">Fetching latest checks from Upptime.</p>
+          </div>
+        </div>
+
+        <div class="hero__meta">
+          <div class="pill" id="lastUpdatedPill">Last updated: —</div>
+          <div class="pill pill--muted">Powered by Upptime (GitHub Actions + Pages)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2>Monitored services</h2>
+        <p class="muted">Live checks + response time trend. Click a service for details.</p>
+      </div>
+
+      <div class="grid" id="servicesGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2>How this works</h2>
+      </div>
+      <div class="card card--thin">
+        <ul class="list">
+          <li><strong>Checks</strong> run from GitHub Actions on a schedule.</li>
+          <li><strong>History</strong> is stored in the repository (api / graphs / history).</li>
+          <li><strong>Incidents</strong> are tracked as GitHub issues.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">© Atelier YO — Status</span>
+      <span class="muted">•</span>
+      <a class="footer__link" href="https://github.com/upptime/upptime" rel="noopener">Upptime</a>
+    </footer>
+  </main>
+
+  <dialog class="modal" id="detailsModal">
+    <div class="modal__inner">
+      <button class="modal__close" id="closeModal" aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </dialog>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
