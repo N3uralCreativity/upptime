@@ -2,29 +2,34 @@
 owner: N3uralCreativity
 repo: upptime
 
-# Keep this containing "uptime.js.org" since your Cloudflare rule is matching it
-user-agent: uptime.js.org
+# Keep a stable UA (also useful for Cloudflare allow rules)
+user-agent: uptime.atelier-yo.fr
 
 sites:
   - name: Atelier YO
     url: https://atelier-yo.fr
-    icon: https://atelier-yo.fr/favicon.ico
+    icon: https://n3uralcreativity.github.io/upptime/assets/site-icon.png
+
   - name: Atelier YO (www)
     url: https://www.atelier-yo.fr
-    icon: https://atelier-yo.fr/favicon.ico
+    icon: https://n3uralcreativity.github.io/upptime/assets/site-icon.png
 
 status-website:
   # Custom domain
   cname: status.atelier-yo.fr
 
+  # Built-in theme base + your overrides
+  theme: night
+  themeUrl: https://n3uralcreativity.github.io/upptime/assets/atelier-yo-theme.css
+
   # Branding
   name: Atelier YO — Status
-  introTitle: "Atelier YO — Service status"
-  introMessage: "Live uptime + incident history for **atelier-yo.fr**."
+  logoUrl: https://n3uralcreativity.github.io/upptime/assets/logo.svg
+  favicon: https://n3uralcreativity.github.io/upptime/assets/favicon.png
+  faviconSvg: https://n3uralcreativity.github.io/upptime/assets/logo.svg
 
-  # These 2 only work AFTER you add the files into /assets (next section)
-  logoUrl: /logo.svg
-  themeUrl: /atelier-yo-theme.css
+  introTitle: "Atelier YO — Service status"
+  introMessage: "Live uptime & incident history for **atelier-yo.fr**."
 
   navbar:
     - title: Status
@@ -36,12 +41,14 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
+  # Nice meta
   metaTags:
     - name: "theme-color"
       content: "#0b1220"
     - name: "color-scheme"
       content: "dark light"
 
+  # Optional but nice
   customHeadHtml: >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
