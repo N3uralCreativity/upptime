@@ -1,20 +1,17 @@
 # Core
 owner: N3uralCreativity
 repo: upptime
-user-agent: upptime.atelier-yo.fr
+
+# Keep this containing "uptime.js.org" since your Cloudflare rule is matching it
+user-agent: uptime.js.org
 
 sites:
   - name: Atelier YO
     url: https://atelier-yo.fr
     icon: https://atelier-yo.fr/favicon.ico
-    headers:
-      - "User-Agent: upptime.atelier-yo.fr"
-
   - name: Atelier YO (www)
     url: https://www.atelier-yo.fr
     icon: https://atelier-yo.fr/favicon.ico
-    headers:
-      - "User-Agent: upptime.atelier-yo.fr"
 
 status-website:
   # Custom domain
@@ -22,16 +19,12 @@ status-website:
 
   # Branding
   name: Atelier YO — Status
-
-  # IMPORTANT: load assets from GitHub Pages (reliable)
-  logoUrl: https://n3uralcreativity.github.io/upptime/assets/logo.svg
-  faviconSvg: https://n3uralcreativity.github.io/upptime/assets/logo.svg
-
-  # Theme CSS (also from GitHub Pages)
-  themeUrl: https://n3uralcreativity.github.io/upptime/assets/atelier-yo-theme.css
-
   introTitle: "Atelier YO — Service status"
   introMessage: "Live uptime + incident history for **atelier-yo.fr**."
+
+  # These 2 only work AFTER you add the files into /assets (next section)
+  logoUrl: /logo.svg
+  themeUrl: /atelier-yo-theme.css
 
   navbar:
     - title: Status
@@ -43,14 +36,12 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-  # Optional extra meta
   metaTags:
     - name: "theme-color"
       content: "#0b1220"
     - name: "color-scheme"
       content: "dark light"
 
-  # Optional: nicer font
   customHeadHtml: >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
