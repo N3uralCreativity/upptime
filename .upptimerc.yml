@@ -1,8 +1,9 @@
+# Core
 owner: N3uralCreativity
 repo: upptime
 
-# Keep stable UA for Cloudflare allow rules
-user-agent: uptime.atelier-yo.fr
+# Used for uptime checks (some CDNs/WAFs block unknown bots)
+user-agent: "upptime.atelier-yo.fr"
 
 sites:
   - name: Atelier YO
@@ -10,34 +11,19 @@ sites:
   - name: Atelier YO (www)
     url: https://www.atelier-yo.fr
 
+# Keep this for Upptime-generated links + CNAME file.
+# (We deploy a custom UI via .github/workflows/site.yml)
 status-website:
   cname: status.atelier-yo.fr
-
-  # Use built-in theme (already nicer than default)
-  theme: night
-
-  # Optional: your own CSS overrides (we'll host it from GitHub Pages)
-  themeUrl: https://n3uralcreativity.github.io/upptime/assets/atelier-yo-theme.css
-
   name: Atelier YO — Status
   introTitle: "Atelier YO — Service status"
-  introMessage: "Live uptime & incident history for **atelier-yo.fr**."
-
+  introMessage: "Live uptime + incident history for **atelier-yo.fr**."
   navbar:
     - title: Status
       href: /
     - title: Main website
       href: https://atelier-yo.fr
     - title: Incidents
-      href: /history
-
-  metaTags:
-    - name: "theme-color"
-      content: "#0b1220"
-    - name: "color-scheme"
-      content: "dark light"
-
-  customHeadHtml: >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+      href: https://github.com/$OWNER/$REPO/issues
+    - title: GitHub
+      href: https://github.com/$OWNER/$REPO
