@@ -26,7 +26,6 @@ status-website:
   # IMPORTANT: load assets from GitHub Pages (reliable)
   logoUrl: https://n3uralcreativity.github.io/upptime/assets/logo.svg
   faviconSvg: https://n3uralcreativity.github.io/upptime/assets/logo.svg
-  favicon: https://n3uralcreativity.github.io/upptime/assets/favicon.png
 
   # Theme CSS (also from GitHub Pages)
   themeUrl: https://n3uralcreativity.github.io/upptime/assets/atelier-yo-theme.css
