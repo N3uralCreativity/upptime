@@ -1,13 +1,20 @@
 # Change these first
-user-agent: Mozilla/5.0 (Upptime)
 owner: N3uralCreativity
 repo: upptime
+
+# Make the User-Agent predictable (Cloudflare will see this)
+user-agent: upptime.js.org
 
 sites:
   - name: Atelier YO (Main)
     url: https://atelier-yo.fr
+    headers:
+      - "User-Agent: upptime.js.org"
+
   - name: Atelier YO (www)
     url: https://www.atelier-yo.fr
+    headers:
+      - "User-Agent: upptime.js.org"
 
 status-website:
   # No custom domain for the status page:
