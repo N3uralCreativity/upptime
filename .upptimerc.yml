@@ -3,7 +3,7 @@ owner: N3uralCreativity
 repo: upptime
 
 # Make the User-Agent predictable (Cloudflare will see this)
-user-agent: upptime.js.org
+user-agent: Mozilla/5.0 (Upptime)
 
 sites:
   - name: Atelier YO (Main)
