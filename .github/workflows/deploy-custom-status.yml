@@ -1,0 +1,67 @@
+name: Deploy Custom Status Site
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - status/**
+      - api/**
+      - history/**
+      - graphs/**
+      - CNAME
+      - .github/workflows/deploy-custom-status.yml
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site output
+        run: |
+          rm -rf public
+          mkdir -p public
+
+          # Custom UI (your HTML/CSS/JS)
+          if [ -d "status" ]; then
+            cp -R status/* public/
+          fi
+
+          # Upptime-generated data (needed by your UI)
+          if [ -d "api" ]; then cp -R api public/; fi
+          if [ -d "history" ]; then cp -R history public/; fi
+          if [ -d "graphs" ]; then cp -R graphs public/; fi
+
+          # Custom domain (prefer status/CNAME if you keep it there)
+          if [ -f "status/CNAME" ]; then
+            cp status/CNAME public/CNAME
+          elif [ -f "CNAME" ]; then
+            cp CNAME public/CNAME
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
