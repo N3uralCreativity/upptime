@@ -1,6 +1,9 @@
 name: Deploy Custom Status Site
 
 on:
+  # Run daily at 15 minutes after every hour (adjust to fit your needs)
+  schedule:
+    - cron: '15 * * * *'
   workflow_dispatch:
   push:
     branches: [master]
