@@ -1,7 +1,7 @@
 url: https://www.atelier-yo.fr
-status: up
-code: 200
-responseTime: 1353
-lastUpdated: 2026-03-07T23:19:39.335Z
+status: down
+code: 502
+responseTime: 498
+lastUpdated: 2026-03-08T16:40:08.641Z
 startTime: 2025-12-23T21:30:20.468Z
 generator: Upptime <https://github.com/upptime/upptime>
